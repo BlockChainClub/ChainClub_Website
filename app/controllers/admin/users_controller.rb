@@ -1,8 +1,8 @@
 class Admin::UsersController < Admin::BaseController
   before_action :require_super_admin!
-  
+
    def index
-     @users = User.all.paginate(:page => params[:page], :per_page => 20) 
+     @users = User.all.paginate(:page => params[:page], :per_page => 20)
    end
 
    def edit
@@ -30,7 +30,7 @@ class Admin::UsersController < Admin::BaseController
      flash[:alert] = "成功完成 #{total} 笔"
      redirect_to admin_users_path
    end
-   
+
    protected
 
    def user_params

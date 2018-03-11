@@ -335,7 +335,6 @@ ActiveRecord::Schema.define(version: 20180204114045) do
     t.integer "last_active_mark"
     t.integer "stars_count", default: 0
     t.string "status", default: "public"
-    t.index ["node_id"], name: "index_topics_on_node_id"
     t.index ["user_id"], name: "index_topics_on_user_id"
   end
 

@@ -1,3 +1,4 @@
+<% if current_user.is_super_admin? %>
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3 class="panel-title">修改记录</h3>
@@ -31,5 +32,8 @@
     <div class="text-center">
       <%= will_paginate @versions, renderer: BootstrapPagination::Rails, :previous_label => t('上一页'), :next_label => t('下一页') %>
     </div>
-  </div>  
+  </div>
 </div>
+<% else %>
+   没有权限
+<% end %>

@@ -1,3 +1,4 @@
+<% if current_user.is_super_admin? %>
 <div class="container">
   <div class="panel panel-default">
     <!-- Default panel contents -->
@@ -5,7 +6,7 @@
     <div class="panel-body">
       <p>操作说明：mark</p>
       <hr>
-      
+
       <!-- Table -->
       <div id="admin_users">
         <%= form_tag bulk_update_admin_users_path, :class => "form-inline" do %>
@@ -35,14 +36,17 @@
           </table>
           <p><%= submit_tag "批次删除", :class => "btn btn-danger", :data => { :confirm => "Are you sure?" } %></p>
         <% end %>
-       
+
         <div class="text-center">
           <%= will_paginate @users, renderer: BootstrapPagination::Rails, :previous_label => t('上一页'), :next_label => t('下一页') %>
         </div>
-      </div>    
+      </div>
     </div>
   </div>
 </div>
+<% else %>
+   没有权限
+<% end %>
 
 <script>
   // 这个 javascript 会绑事件在 #toggle_all 核选方块上，来做全选效果
