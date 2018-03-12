@@ -7,7 +7,7 @@
 </div>
 
 <div class="container">
-  <div class="col-md-9 group-index-box">
+  <div class="col-xs-9 group-index-box">
 
     <div class="row">
       <%= render :partial => "group_item", :collection => @groups, :as => :group %>
@@ -33,7 +33,7 @@
             </span>
           </p>
         <% end %>
-        
+
         <div class="text-center">
           <%= will_paginate @posts, renderer: BootstrapPagination::Rails, :previous_label => t('上一页'), :next_label => t('下一页') %>
         </div>
@@ -42,7 +42,7 @@
     </div>
   </div>
 
-  <div class="sidebar col-md-3">
+  <div class="sidebar col-xs-3">
     <%= render "sidebar_for_group_index" %>
   </div>
 </div>
