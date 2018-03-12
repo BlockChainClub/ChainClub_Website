@@ -6,7 +6,7 @@
         <nav class="navbar navbar-default navbar-fixed-top show_bgcolor" role="navigation">
     <% end %>
 
-        <div class="container ">
+        <div class="container nav-container">
             <!-- 后期采用app-navbar 样式-->
             <div class="navbar-header">
                 <a class="navbar-brand" href="/"><img src='<%= image_url 'logo.png' %>' >区块链研习社</a>
@@ -14,19 +14,19 @@
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-left">
-                  <li><%= link_to("社区", topics_path) %></li>
-                  <li><%= link_to("资讯", official_articles_path) %></li>
-                  <li><%= link_to("小组", groups_path) %></li>
+                <ul class="nav navbar-nav navbar-middle">
                   <li><%= link_to("大讲堂", courses_path) %></li>
-                  <li><%= link_to("项目评级", projects_path) %></li>
+                  <li><%= link_to("社区", topics_path) %></li>
+                  <li><%= link_to("小组", groups_path) %></li>
                   <li><%= link_to("活动", meetup_groups_path) %></li>
+                  <!-- <li><%= link_to("项目评级", projects_path) %></li>
                   <li><%= link_to("机会", jobs_path) %></li>
                   <li><%= link_to("导航", sites_path) %></li>
+                   <li><%= link_to("资讯", official_articles_path) %></li> -->
 
 
                   <li class="dropdown mega-dropdown">
-                    <a href="<%= sites_path %>" class="dropdown-toggle" data-toggle="dropdown">推广<span class="caret"></span></a>
+                    <a href="<%= sites_path %>" class="dropdown-toggle" data-toggle="dropdown">导航<span class="caret"></span></a>
                     <ul class="dropdown-menu mega-dropdown-menu">
                       <li class="col-sm-3">
                         <ul>
@@ -58,6 +58,8 @@
                           <li><a href="https://etherscan.io/">以太坊ETH区块查询</a></li>
                           <li><a href="https://blockdozer.com/">BCC BCH区块查询</a></li>
                           <li><a href="https://neotracker.io/">小蚁股NEO区块查询</a></li>
+                          <li class="divider"></li>
+                          <li><a href="<%= sites_path %>">更多 <span class="glyphicon glyphicon-chevron-right pull-right"></span></a></li>
                       </ul>
                       </li>
 
