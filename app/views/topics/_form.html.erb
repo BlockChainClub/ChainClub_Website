@@ -5,7 +5,7 @@
     <%= f.label "话题节点" %>
     <%= f.select :node_id, Node.all.map{ |c| [c.name, c.id] }, {}, :class => "form-control" %>
   </div>
-  
+
   <div class="form-group">
 
     <%= f.label "标题" %>
@@ -14,10 +14,13 @@
 
   <div class="form-group">
     <%= f.label "内容" %>
-    <%= f.cktext_area :content, ckeditor: { language: 'zh-CN'} %>
+    <!-- <%= f.cktext_area :content, ckeditor: { language: 'zh-CN'} %> -->
+    <%= md_simple_editor  do %>
+        <%= f.text_area :content, style: "width: 100%; height: 200px" %>
+    <% end %>
   </div>
 
-  
+
   <div class="form-group">
     <%= f.submit "提交", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>
 

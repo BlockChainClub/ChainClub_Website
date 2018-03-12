@@ -22,7 +22,7 @@
       <!-- End of left card -->
       <!-- Start of right cart -->
       <div class="details col-md-5" style="margin-top:50px;">
-        
+
         <h3 class="product-title"><%= link_to(@meetup_group.title, meetup_group_path(@meetup_group)) %></h3>
         <div class="price-service">
           <p class="price">活动期限 &nbsp;&nbsp;<span class="delivery"> <%= @meetup_group.time_limit %></span></p>
@@ -43,12 +43,12 @@
             <% if current_user && current_user.is_favor_of_meetup_group?(@meetup_group) %>
               <%= link_to unfavorite_meetup_group_path(@meetup_group), method: :post, class: "btn btn-danger" do %>
                 <i class="fa fa-heart-o fa-lg"></i>
-              <% end %>   
-            <% else %>    
+              <% end %>
+            <% else %>
               <%= link_to favorite_meetup_group_path(@meetup_group), method: :post, class: "like btn  btn-default" do %>
                 <i class="fa fa-heart-o fa-lg"></i>
-              <% end %>        
-            <% end %> 
+              <% end %>
+            <% end %>
           </div>
 
         </div>
@@ -88,12 +88,12 @@
               <div class="tab-pane active" id="tab_default_1">
                 <p class="product-description2 text-center">活动详情</p>
                 <div class="container">
-                  <p class="product-description"><%= sanitize @meetup_group.introduce %></p>
+                  <p class="product-description"><%= to_markdown(@meetup_group.introduce) %></p>
                 </div>
               </div><!-- End of tab_default_1 -->
 
               <div class="tab-pane" id="tab_default_2">
-              
+
                 <%= render "meetup_comment" %>
 
               </div><!-- End of tab_default_2 -->

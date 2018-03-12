@@ -23,7 +23,7 @@
         <div class="col-md-12">
           创建于<%= time_tag(@group.created_at) %>
           组长：<%= @group.user.display_name %>
-          <p><%= render_group_description(@group) %></p>
+          <p><%= to_markdown(render_group_description(@group)) %></p>
         </div>
       </div>
     </div>

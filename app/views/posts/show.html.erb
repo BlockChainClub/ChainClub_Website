@@ -19,7 +19,7 @@
       </div>
       <div class="panel-body">
         <div class="article-content">
-          <%= simple_format(@post.content) %>
+          <%= to_markdown(@post.content) %>
         </div>
         <br>
       </div>

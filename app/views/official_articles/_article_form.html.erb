@@ -16,7 +16,11 @@
     <%= f.input :source, input_html: { class: "form-control"}, :label => "来源" %>
     <%= f.input :summary, input_html: { class: "form-control",  style: "height:100px"}, :label => "简介" %>
     <%= f.association :article_category, :label => "文章分类" %>
-    <%= f.input :content, as: :wysihtml5, input_html: { class: "form-control",  style: "height:900px"}, :label => "内容" %>
+    <!-- <%= f.input :content, as: :wysihtml5, input_html: { class: "form-control",  style: "height:900px"}, :label => "内容" %> -->
+    <%= f.label "内容" %>
+      <%= md_simple_editor  do %>
+          <%= f.text_area :content, style: "width: 100%; height: 200px" %>
+    <% end %>
   </div>
 
   <%= f.submit "提交审核", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>

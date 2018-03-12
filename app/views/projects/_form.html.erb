@@ -97,8 +97,12 @@
   </div>
 
   <div class="form-group">
-    <%= f.label "项目介绍" %>
+    <!-- <%= f.label "项目介绍" %>
+      <%= md_simple_editor  do %>
+          <%= f.text_area :introduce, style: "width: 100%; height: 200px" %>
+    <% end %> -->
     <%= f.cktext_area :introduce, ckeditor: { language: 'zh-CN'} %>
+
   </div>
 
 

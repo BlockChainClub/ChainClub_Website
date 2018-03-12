@@ -12,6 +12,7 @@
  *
  *= require font-awesome
  *= require social-share-button
+ *= require md_simple_editor
  *= require_tree .
  *= require_self
  */
@@ -35,7 +36,7 @@ body {
   display: flex;                                     // footer固定底部
   flex-direction: column;                            // footer固定底部
   height: 100%;                                      // footer固定底部
-  font-family: 'Noto Sans SC', sans-serif;           // google思源黑简作为主字体
+  font-family: Arial, Helvetica, sans-serif;          // google思源黑简作为主字体
   padding: 70px 0 0 0;                               // 腾出navbar的遮挡空间
   position: relative;
   background-color: #F5F5F5;
@@ -366,4 +367,3 @@ body {
   .favorite-btn{
     color: #ef5350;
   }
-

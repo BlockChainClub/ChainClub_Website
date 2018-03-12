@@ -13,7 +13,11 @@
 
   <div class="form-group">
     <%= f.input :title, input_html: { class: "form-control"}, :label => "小组名称" %>
-    <%= f.input :description, as: :wysihtml5, :label => "小组介绍", input_html: { rows: "20"} %>
+    <!-- <%= f.input :description, as: :wysihtml5, :label => "小组介绍", input_html: { rows: "20"} %> -->
+    <%= f.label "内容" %>
+      <%= md_simple_editor  do %>
+          <%= f.text_area :description, style: "width: 100%; height: 400px" %>
+    <% end %>
     <!-- <%= f.cktext_area :description, ckeditor: { language: 'zh-CN'}, :label => "小组介绍" %> -->
   </div>
   <%= f.submit "提交审核", class: "btn btn-primary", data: { disable_with: "Submiting..." } %>

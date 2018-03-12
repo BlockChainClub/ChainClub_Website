@@ -1,7 +1,11 @@
 <%= simple_form_for [@group,@post] do |f| %>
   <div class="form-group">
     <%= f.input :title, input_html: { class: "form-control"}, :label => "标题" %>
-    <%= f.input :content, as: :wysihtml5, :label => "内容" %>
+    <!-- <%= f.input :content, as: :wysihtml5, :label => "内容" %> -->
+    <%= f.label "内容" %>
+      <%= md_simple_editor  do %>
+          <%= f.text_area :content, style: "width: 100%; height: 400px" %>
+    <% end %>
   </div>
   <div class="form-actions">
     <%= f.submit "Submit", disable_with: "Submiting...", class: "btn btn-primary"%>
