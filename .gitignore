@@ -23,3 +23,4 @@
 
 .byebug_history
 config/database.yml
+config/database.yml\nconfig/secrets.yml
