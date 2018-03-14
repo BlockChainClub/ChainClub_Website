@@ -4,7 +4,7 @@ sh "ssh-add"
 lock "~> 3.10.1"
 
 set :application, "chain_club"
-set :repo_url, "git@github.com:Kerzzi/ChainClub.git"
+set :repo_url, "git@github.com:BlockChainClub/ChainClub_Website.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
